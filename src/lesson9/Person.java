@@ -16,10 +16,10 @@ public class Person {
     }
 
     public void setHeight(float height) {
-        if(height>120&&height<220)
-
-        {this.height = height;
-        };
+        if (height > 120 && height < 220) {
+            this.height = height;
+        }
+        ;
     }
 
     public float getHeight() {
@@ -27,7 +27,7 @@ public class Person {
     }
 
     public void setAge(int age) {
-        if (age<100&&age>0)
+        if (age < 100 && age > 0)
             this.age = age;
     }
 
@@ -39,8 +39,9 @@ public class Person {
         return name;
 
     }
-    public void setName(String name){
-        if(name.length()>3&&name.length()<15){
+
+    public void setName(String name) {
+        if (name.length() > 3 && name.length() < 15) {
             this.name = name;
         }
     }
