@@ -25,21 +25,18 @@ public class Student {
         System.out.println(object.averageMark);
 
     }
-    public static void checkMark(Student newStudent){
-        if(newStudent.averageMark>5){
-            System.out.println("You are great student!!!");
-        }
-        else{
-            System.out.println("Wasted!");
-        }
-    }
+    public static boolean checkMark(Student newStudent){
+        boolean validation;
+        validation = newStudent.averageMark > 5;
+   return validation ; }
  public static void main(String[] args) {
         Student Misa = new Student();
         Student badStudent= new Student("Vasea",23,4);
         Cocktail cocktail = new Cocktail();
 printStudent(Misa);
 checkMark(badStudent);
-Cocktail.tuffAlchool(cocktail);
+cocktail.tuffAlchool();
+checkMark(Misa);
 
 
 }
