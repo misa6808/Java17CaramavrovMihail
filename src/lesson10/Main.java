@@ -8,5 +8,6 @@ public class Main {
 
         Hamster hamster = new Hamster("Bob");
         hamster.sleep();
+        System.out.println(hamster.name);
     }
 }

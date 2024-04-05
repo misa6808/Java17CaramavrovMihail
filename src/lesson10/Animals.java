@@ -1,13 +1,13 @@
 package lesson10;
 /*Создайте класс Animal. При вызове его конструктора на экран должно выводиться «I am Animal».В классе создайте
 переменную eyes и методы eat, который будет выводить “Animal eats" и drink, который будет выводить “Animal drinks”.*/
-// Base class Animal
+// Base class Animal, parent class that descript what can do our animal.
 class Animal {
-    int eyes;
+    public int eyes ;
 
     public Animal() {
         System.out.println("I am Animal");
-        eyes = 2;
+
     }
 
     public void eat() {

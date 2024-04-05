@@ -7,14 +7,21 @@ package lesson10;
 // Class Pet, inheriting from Animal class
 class Pet extends Animal {
     String name;
-    int tail;
+    int tail=1;
+
     final int paw = 4;
 
     public Pet(String name) {
+       this.name = name;
+
+
+    }
+    public Pet() {
         super();
         System.out.println("I am Pet");
-        this.name = name;
-        this.tail = 1;
+        eyes = 2;
+        System.out.println("Eyes: "+eyes);
+
     }
 
     public void run() {
