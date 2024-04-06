@@ -6,8 +6,10 @@ package lesson10;
 
 class Hamster extends Pet {
     public Hamster(String name) {
+
         super(name);
-        System.out.println("I am a hamster and my name is: " + name);
+
+        System.out.println("I am a hamster and my name is: " + getName());
     }
 
     public void sleep() {

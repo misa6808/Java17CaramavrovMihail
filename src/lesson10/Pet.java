@@ -6,23 +6,44 @@ package lesson10;
  */
 // Class Pet, inheriting from Animal class
 class Pet extends Animal {
-    String name;
-    int tail=1;
+    private String name;
+    private int tail=1;
 
-    final int paw = 4;
+    private final int paw = 4;
 
     public Pet(String name) {
-       this.name = name;
+        super();
 
-
+        this.name = name;
     }
     public Pet() {
-        super();
+        super(2);
         System.out.println("I am Pet");
-        eyes = 2;
-        System.out.println("Eyes: "+eyes);
+
+
 
     }
+
+    public int getPaw() {
+        return paw;
+    }
+
+    public int getTail() {
+        return tail;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setTail(int tail) {
+        this.tail = tail;
+    }
+
 
     public void run() {
         System.out.println("Pet runs");
