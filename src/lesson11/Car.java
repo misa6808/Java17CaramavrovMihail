@@ -9,10 +9,9 @@ public class Car extends Transport{
     }
     @Override
     public void go(){
-        super.go();
+
         System.out.println("This car can go");
     }
-
 
     public void calculateDistance(){
         int speed = 60;

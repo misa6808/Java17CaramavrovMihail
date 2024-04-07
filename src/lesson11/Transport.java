@@ -4,14 +4,9 @@ package lesson11;
 //В этом классе перегрузите метод calculateDistance(), который может принимать либо сразу
 //        дистанцию int dist, либо принимать (скорость, время) и результат будет dist = v * s
 public abstract class Transport {
-    protected void printInfo(){
+  public void printInfo(){
         System.out.println("My transport:");
     };
-    protected   void go(){
-        System.out.println("I can go?");
-    }
-    protected abstract void calculateDistance();
+  public abstract    void go();
 
-    protected void calculateDistance(int a) {
-    }
 }

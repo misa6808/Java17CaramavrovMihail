@@ -8,7 +8,7 @@ public class Bus extends Transport {
     }
     @Override
     public void go(){
-        super.go();
+
         System.out.println("This bus can go");
 
     }
@@ -28,8 +28,8 @@ public class Bus extends Transport {
     public static void main(String[] arg){
         Transport myTransport = new Car();
         myTransport.printInfo();
-        myTransport.calculateDistance(90);
-        myTransport.calculateDistance();
+        ((Car) myTransport).calculateDistance(90);
+        ((Car) myTransport).calculateDistance();
 
 
     }

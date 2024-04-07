@@ -8,7 +8,7 @@ public class Truck extends Transport{
     }
     @Override
     public void go(){
-        super.go();
+
         System.out.println("This truck can go");
 
     }
