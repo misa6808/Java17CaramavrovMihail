@@ -5,8 +5,9 @@ package lesson12.instruments;
 //      В цикле вызвать метод play() для каждого инструмента, который должен выводить
 //      строку "Играет такой-то инструмент, с такими-то характеристиками".
 public class Trumpet implements Instrument{
-    private float diameter;
+    private final float diameter;
     Trumpet(){
+
         diameter = 5.5f;
     }
 
@@ -14,9 +15,7 @@ public class Trumpet implements Instrument{
         return diameter;
     }
 
-    public void setDiameter(float diameter) {
-        this.diameter = diameter;
-    }
+
 
     @Override
     public void play() {

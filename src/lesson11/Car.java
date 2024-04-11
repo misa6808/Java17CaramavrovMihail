@@ -4,7 +4,7 @@ public class Car extends Transport{
 
     @Override
     public void printInfo() {
-        super.printInfo();
+
         System.out.println("This is a car");
     }
     @Override
@@ -12,7 +12,7 @@ public class Car extends Transport{
 
         System.out.println("This car can go");
     }
-
+        @Override
     public void calculateDistance(){
         int speed = 60;
         int time = 60;  // second

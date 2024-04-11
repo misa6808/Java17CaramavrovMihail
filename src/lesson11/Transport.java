@@ -9,4 +9,8 @@ public abstract class Transport {
     };
   public abstract    void go();
 
+
+    public abstract void calculateDistance();
+
+    public abstract void calculateDistance(int i);
 }

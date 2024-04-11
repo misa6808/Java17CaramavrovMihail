@@ -3,7 +3,7 @@ package lesson11;
 public class Truck extends Transport{
     @Override
     public void printInfo(){
-        super.printInfo();
+
         System.out.println("This is a truck");
     }
     @Override
