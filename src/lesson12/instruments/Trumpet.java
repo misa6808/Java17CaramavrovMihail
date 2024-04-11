@@ -31,5 +31,6 @@ public class Trumpet implements Instrument{
             (orchestra[i+1]= new Drum()).play();
             (orchestra[i+2] = new Guitar()).play();
         }
+        System.out.println("Thanks!!!");
     }
 }
