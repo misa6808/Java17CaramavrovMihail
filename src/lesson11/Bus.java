@@ -30,6 +30,7 @@ public class Bus extends Transport {
         myTransport.printInfo();
         ((Car) myTransport).calculateDistance(90);
         ((Car) myTransport).calculateDistance();
+        myTransport.go();
 
 
     }
