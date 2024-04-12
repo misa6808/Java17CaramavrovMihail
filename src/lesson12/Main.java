@@ -26,8 +26,7 @@ public class Main {
         arr[1]= new Book("Ion","Liviu Rebreanu",77);
         arr[2]= new Magazine("Alunelul","Adevar",9);
         arr[3]= new Book("Padurea spinzuratilor","Liviu Rebreanu",77);
-        for (var prt:arr
-             ) {
+        for (var prt:arr) {
             prt.print();
         }
         System.out.println("Today for us will play greatest orchestra with instruments:");
@@ -38,9 +37,13 @@ public class Main {
         orchestra[3]= new Drum("6");
         orchestra[4]= new Trumpet(5.8f);
         orchestra[5] = new Guitar(12);
-        for (var prt:orchestra
-             ) {
+        for (var prt:orchestra) {
             prt.play();
         }
+        System.out.println("--------------------");
+        Magazine.printMagazines(arr);
+        System.out.println("--------------------");
+        Book.printBooks(arr);
+
     }
 }

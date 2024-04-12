@@ -1,7 +1,4 @@
 package lesson12.books;
-
-
-
 //Определить класс Book, реализующий интерфейс Printable.
 public class Book implements Printable {
     private String name;
