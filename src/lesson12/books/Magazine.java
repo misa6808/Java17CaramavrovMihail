@@ -13,10 +13,10 @@ public class Magazine implements Printable {
     private String editors;
     private int popularity;
 
-    Magazine() {
-        name = "The Times";
-        editors = "Oliver Moody";
-        popularity = 9;
+    public Magazine(String name, String editors, int popularity) {
+        this.name = name;
+        this.editors = editors;
+        this.popularity = popularity;
     }
 
     public String getName() {
@@ -44,40 +44,17 @@ public class Magazine implements Printable {
     }
 
     public void print() {
-        System.out.println("Magazine name:" + name);
-        System.out.println("Editor:" + editors);
-        System.out.println("Popularity mark::" + popularity);
+        System.out.print("Magazine name:" + name);
+        System.out.print(" Editor:" + editors);
+        System.out.println("  Popularity mark::" + popularity);
     }
 
     public static void printMagazines(Printable[] printable) {
-        Magazine magazine = new Magazine();
-        System.out.println("Magazine name:" + magazine.name);
-        System.out.println("Editor:" + magazine.editors);
-        System.out.println("Popularity mark::" + magazine.popularity);
-    }
-
-    public static void main(String[] args) {
-        Printable[] arr = new Printable[6];
-        for (int i = 0; i < arr.length; i += 2) {
-            arr[i] = new Book();
-            arr[i + 1] = new Magazine();
-            // arr[i].print();
-            // arr[i+1].print();
-        }
-
-
-        for (int i = 0; i < arr.length; i ++) {
-            if (arr[i] instanceof Magazine) {
-                System.out.println("This is a book");
-                Magazine.printMagazines(arr);
-
-            } else {
-                System.out.println("This is a book");
-                Book.printBooks(arr);
-
+        for(var prt : printable){
+            if(prt instanceof Magazine){
+                prt.print();
             }
         }
-
     }
 }
 
