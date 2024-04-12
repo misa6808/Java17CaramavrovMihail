@@ -1,14 +1,14 @@
-package lesson12.paperPackage;
-
+package lesson12.books;
 //Определить класс Book, реализующий интерфейс Printable.
 public class Book implements Printable {
     private String name;
     private String author ;
     private int nrOfPage;
-    Book(){
-        author = "Sherlock Holmes";
-        name = "Sir Arthur Conan-Doyle";
-        nrOfPage = 500;
+
+    public Book(String name, String author, int nrOfPage) {
+        this.name = name;
+        this.author = author;
+        this.nrOfPage = nrOfPage;
     }
 
     public String getName() {
@@ -36,14 +36,17 @@ public class Book implements Printable {
     }
 
     public void print() {
-        System.out.println("Name:"+name);
-        System.out.println("Author:"+author);
-        System.out.println("Pages:"+nrOfPage);
+        System.out.print("Name:"+name);
+        System.out.print(" Author:"+author);
+        System.out.println(" Pages:"+nrOfPage);
     }
-    public static void printBooks(Printable[] printable){
-        Book book = new Book();
-        System.out.println("Magazine name:"+book.name);
-        System.out.println("Editor:"+book.author);
-        System.out.println("Popularity mark::"+book.nrOfPage);
-    }
+
+    public static void printBooks(Printable[] printable) {
+            for(var prt : printable){
+                if(prt instanceof Book){
+                    prt.print();
+                }
+            }
+        }
 }
+
