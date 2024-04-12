@@ -3,12 +3,12 @@ package lesson11;
 public class Bus extends Transport {
     @Override
     public void printInfo() {
-    public void printInfo(){
 
         super.printInfo();
 
         System.out.println("This is a bus");
     }
+
     @Override
     public void go() {
         System.out.println("This bus can go");
@@ -31,8 +31,8 @@ public class Bus extends Transport {
         Transport myTransport = new Car();
         myTransport.printInfo();
 
-      myTransport.calculateDistance(90);
-      myTransport.calculateDistance();
+        myTransport.calculateDistance(90);
+        myTransport.calculateDistance();
         myTransport.calculateDistance(90);
         myTransport.calculateDistance();
         myTransport.go();
@@ -41,6 +41,7 @@ public class Bus extends Transport {
         ((Car) myTransport).calculateDistance();
 
 
-
     }
 }
+
+
