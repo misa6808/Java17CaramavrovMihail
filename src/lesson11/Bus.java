@@ -3,7 +3,11 @@ package lesson11;
 public class Bus extends Transport {
     @Override
     public void printInfo(){
+<<<<<<< HEAD
 
+=======
+        super.printInfo();
+>>>>>>> origin/master
         System.out.println("This is a bus");
     }
     @Override
@@ -28,9 +32,14 @@ public class Bus extends Transport {
     public static void main(String[] arg){
         Transport myTransport = new Car();
         myTransport.printInfo();
+<<<<<<< HEAD
       myTransport.calculateDistance(90);
       myTransport.calculateDistance();
         myTransport.go();
+=======
+        ((Car) myTransport).calculateDistance(90);
+        ((Car) myTransport).calculateDistance();
+>>>>>>> origin/master
 
 
     }
