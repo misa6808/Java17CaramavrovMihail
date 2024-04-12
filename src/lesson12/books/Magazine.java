@@ -1,4 +1,6 @@
-package lesson12.paperPackage;
+package lesson12.books;
+
+
 
 //Определить класс Magazine, реализующий интерфейс Printable.
 //Создать массив типа Printable, который будет содержать книги и журналы.В цикле пройти по массиву и вызвать метод print()

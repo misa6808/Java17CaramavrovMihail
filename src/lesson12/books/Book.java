@@ -1,4 +1,6 @@
-package lesson12.paperPackage;
+package lesson12.books;
+
+
 
 //Определить класс Book, реализующий интерфейс Printable.
 public class Book implements Printable {
@@ -47,3 +49,4 @@ public class Book implements Printable {
         System.out.println("Popularity mark::"+book.nrOfPage);
     }
 }
+
