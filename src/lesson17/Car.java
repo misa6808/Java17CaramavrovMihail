@@ -42,7 +42,7 @@ class Car {
             System.out.println("Current fuel level: " + car.getFuelLevel());
             car.safetyBelt("Not Belt"); // Не пристегнули ремень
         } catch (NotFuelException e) {
-            System.out.println("Не хватает топлива: " + e.getMessage());
+            System.out.println("Need fuel : " + e.getMessage());
         } catch (NotBeltException e) {
             System.out.println(e.getMessage());
         } finally {
