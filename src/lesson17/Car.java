@@ -3,7 +3,7 @@ package lesson17;
 // и параметр int. Если данный  параметр равен нулю, то пусть выбрасывается исключение NotFuelException.
 // Второй метод safetyBelt пусть принимает String и если в строке будет значение "Not Belt", то пусть
 // выбрасывается NotBeltException. Если нет, то пусть выводит сообщение "Car is running".
-class Car {
+class Car  {
     private String name;
     private String color;
     private int fuelLevel;
@@ -15,13 +15,14 @@ class Car {
     }
 
     public void drive(int distance) throws NotFuelException {
+        for (int i = 0; i <distance ; i++) {
+            fuelLevel--;
         if (fuelLevel == 0) {
             throw new NotFuelException(fuelLevel);
         }
-        System.out.println("Driving " + distance + " km...");
-        fuelLevel -= distance;
     }
-
+        System.out.println("Driving " + distance + " km...");
+        }
     public void safetyBelt(String beltStatus) throws NotBeltException {
         if (beltStatus.equals("Not Belt")) {
             throw new NotBeltException("Please fasten your seatbelt!");
@@ -38,14 +39,13 @@ class Car {
         Car car = new Car("Lada", "red", 50);
 
         try {
-            car.drive(100); // Едем 100 км
-            System.out.println("Current fuel level: " + car.getFuelLevel());
-            car.safetyBelt("Not Belt"); // Не пристегнули ремень
-        } catch (NotFuelException e) {
-            System.out.println("Не хватает топлива: " + e.getMessage());
-        } catch (NotBeltException e) {
-            System.out.println(e.getMessage());
-        } finally {
+            car.drive(49); // Едем 100 км
+            car.safetyBelt("Not Belt"); // Едем 100 км
+        }
+        catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        finally {
             System.out.println("Final fuel level: " + car.getFuelLevel());
         }
     }
