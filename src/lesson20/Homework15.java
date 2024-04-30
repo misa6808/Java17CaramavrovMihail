@@ -1,5 +1,7 @@
 package lesson20;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,13 +10,15 @@ import java.util.Set;
 // на экран, параллельно наблюдая за порядком добавленных
 //*Напишите метод, который на вход получает коллекцию объектов, а возвращает коллекцию уже без дубликатов.
 public class Homework15 {
+    public static <String>Collection<String> validateSet(Collection<String> set){
+        Set<String> set1 = new HashSet<>();
+        set1.addAll(set);
+        return set1;
+    }
 
-
-
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         // Создание коллекции Set типа String
         Set<String> fruits = new HashSet<>();
-
         // Добавление 11 элементов в коллекцию
         fruits.add("арбуз");
         fruits.add("банан");
@@ -28,11 +32,20 @@ public class Homework15 {
         fruits.add("картофель");
         fruits.add("арбуз"); // Дубликат
 
-        // Вывод содержимого коллекции на экран
-        System.out.println("Содержимое коллекции:");
-        for (String fruit : fruits) {
-            System.out.println(fruit);
-        }
+        System.out.println(fruits);
+
+        ArrayList<String> list=new ArrayList<String>();//Creating arraylist
+        list.add("Ravi");//Adding object in arraylist
+        list.add("Allj");
+        list.add("Vijay");
+        list.add("Ajay");
+        list.add("Ravi");
+        list.add("Allj");
+        list.add("Rav");
+        list.add("Ravi");
+       System.out.println(validateSet(list));
+
     }
+
 }
 
